@@ -1,0 +1,8 @@
+version: "3"
+services:
+  project:
+    build: .
+    tty: true
+    container_name: python-rent-processor
+    volumes:
+      - .:/code

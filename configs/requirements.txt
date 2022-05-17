@@ -1,0 +1,5 @@
+pandas
+
+mock
+pytest
+pytest-cov
