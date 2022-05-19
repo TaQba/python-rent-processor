@@ -2,7 +2,7 @@
 
 
 
-## How to setup DEV environment?
+## How to build and up the container?
 - Go to the folder where you would like to keep code and clone repo from GITHUB
 and checkout the project
 ```
@@ -20,12 +20,12 @@ $ docker-compose up
 ``` 
 
 
-## How to go container?
-- Go to the folder where you would like to keep code and clone repo from  GITHUB
+## How to enter the container?
+- Go to the folder 
 ```
 cd {your_code_directory}/python-rent-processor
 ```
-- Docker contain needs to be up and need to run some commands
+- Docker container needs to be up to enter into it
 
 ```
 docker ps
