@@ -1,5 +1,5 @@
-import time
 import datetime
+import time
 
 
 class Helper:
@@ -20,5 +20,5 @@ class Helper:
 
     @staticmethod
     def change_date_format(date):
-        return datetime.datetime.strptime(date, "%d %b %Y")\
+        return datetime.datetime.strptime(date, "%d %b %Y") \
             .strftime("%d/%m/%Y")

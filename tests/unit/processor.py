@@ -2,6 +2,7 @@ import unittest
 from parameterized import parameterized
 from core.components.processor import Processor
 
+
 class ProcessorTestCase(unittest.TestCase):
     def setUp(self):
         self.to_test = Processor()
@@ -29,7 +30,6 @@ class ProcessorTestCase(unittest.TestCase):
             self.to_test.fix_tenant_name(name),
             expected
         )
-
 
     def test_get_total_test(self):
         data = [

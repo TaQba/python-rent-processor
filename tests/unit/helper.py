@@ -2,6 +2,7 @@ import unittest
 from parameterized import parameterized
 from core.components.helper import Helper
 
+
 class ProcessorTestCase(unittest.TestCase):
     def setUp(self):
         self.to_test = Helper()
@@ -12,7 +13,7 @@ class ProcessorTestCase(unittest.TestCase):
         ("Fail 2", "21 Oct 2032", "21 Aug 2007", "20 Aug 2032", False),
         ("Exception", "foo", "bar", "noo", False),
     ])
-    def test_compare_date(self, _ ,date, start, end, expected):
+    def test_compare_date(self, _, date, start, end, expected):
         self.assertEqual(
             self.to_test.between_dates(date, start, end),
             expected

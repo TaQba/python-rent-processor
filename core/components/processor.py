@@ -1,5 +1,7 @@
 import re
+
 from core.components.helper import Helper
+
 
 class Processor:
     a_list = []
@@ -17,15 +19,14 @@ class Processor:
 
     columns = (
         cn_p_name,
-        cn_add_1,cn_add_2,cn_add_3,cn_add_4,
+        cn_add_1, cn_add_2, cn_add_3, cn_add_4,
         cn_u_name,
         cn_t_name,
         cn_l_s_date, cn_l_e_date, cn_l_years,
         cn_c_rent
     )
 
-
-    def __init__(self, a_list = []):
+    def __init__(self, a_list=[]):
         self.a_list = a_list
 
     def set_list(self, a_list):
@@ -74,14 +75,27 @@ class Processor:
         return output
 
     def get_list_when_lease_start_date_between(self, start_date, end_date):
+        """
+
+        :param start_date:
+        :type start_date:string
+        :param end_date:
+        :type end_date: string
+        :return:
+        :rtype: list
+        """
         return [row for row in self.a_list if Helper.between_dates(
             row[self.cn_l_s_date],
             start_date,
             end_date
         )]
 
-
     def get_for_lease_eq_25(self):
+        """
+
+        :return:
+        :rtype: list
+        """
         return self.__get_for_column_equal(self.cn_l_years, 25)
 
     def __get_for_column_equal(self, column, nb):
@@ -105,12 +119,17 @@ class Processor:
         if column in self.columns:
             return sorted(self.a_list, key=lambda d: d[column], reverse=desc)
         else:
-            raise ValueError('Column name: "{}" does not exist.'.format(column))
+            raise ValueError('Column name: "{}" does not exist.' .
+                             format(column))
 
     @staticmethod
     def fix_tenant_name(name):
-        #strip last dot
-        name =  name.rstrip('.')
+        """
+
+        :rtype: string
+        """
+        # strip last dot
+        name = name.rstrip('.')
 
         name = re.sub(
             r'(.*)Arqiva(.*)',
@@ -118,7 +137,6 @@ class Processor:
             name,
             flags=re.I
         )
-
 
         name = re.sub(
             r'(.*)Everything(.*)',
