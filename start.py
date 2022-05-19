@@ -9,15 +9,15 @@ processor.cast()
 
 start = 0
 end = 5
-print("===================================")
-print("Task1: Display {} sorted records".format(end))
+print("\n===================================\n")
+print("Task1: Display {} sorted records. \n".format(end))
 
 for row in processor.sorted_by_rent_desc()[start: end]:
-    print('{row[processor.cn_t_name]} \t\t\t\t{row[processor.cn_c_rent]}')
+    print('Tenant: {} \t rent: {}'.format(row[processor.cn_t_name], row[processor.cn_c_rent]))
 
 print("===================================\n")
 
-print("Task2: Create a new list of mast data with 'Lease Years' = 25 years."
+print("Task2: Create a new list of mast data with 'Lease Years' = 25 years.\n"
       .format(end))
 
 a_list_25 = processor.get_for_lease_eq_25()
