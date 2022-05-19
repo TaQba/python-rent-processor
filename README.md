@@ -3,7 +3,8 @@
 
 
 ## How to setup DEV environment?
-- Go to folthe der where you would like to keep code and clone repo from  GITHUB
+- Go to the folder where you would like to keep code and clone repo from GITHUB
+and checkout the project
 ```
 cd {your_code_directory}
 git clone https://github.com/TaQba/python-rent-processor.git
