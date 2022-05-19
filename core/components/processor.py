@@ -73,8 +73,12 @@ class Processor:
 
         return output
 
-    def get_lease_between(self, date):
-        return [row for row in self.a_list if Helper.between_dates(date, row[self.cn_l_s_date], row[self.cn_l_e_date])]
+    def get_list_when_lease_start_date_between(self, start_date, end_date):
+        return [row for row in self.a_list if Helper.between_dates(
+            row[self.cn_l_s_date],
+            start_date,
+            end_date
+        )]
 
 
     def get_for_lease_eq_25(self):
