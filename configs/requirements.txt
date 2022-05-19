@@ -1,6 +1,4 @@
-pandas
-
-mock
-pytestas
+pytest
 pytest-cov
+mock
 parameterized

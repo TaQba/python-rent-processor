@@ -1,7 +1,6 @@
-FROM python:3.6-stretch
+FROM python:3.9-bullseye
 
-LABEL maintainer "Network Team <simply-hosting-dev@names.co.uk>"
-LABEL description "Nginx + uWSGI + Flask based on Alpine Linux and managed by Supervisord"
+LABEL maintainer "Network Team <jakub.tadych@gmail.com>"
 
 # updates and new installs
 RUN apt-get update
