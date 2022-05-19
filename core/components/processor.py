@@ -61,7 +61,7 @@ class Processor:
     def get_total_rent(self, the_list):
         return sum(row[self.cn_c_rent] for row in the_list)
 
-    def get_dict_number_properties_per_tent(self):
+    def get_dict_number_properties_per_tenant(self):
         output = {}
         for row in self.a_list:
             name = self.fix_tenant_name(row[self.cn_t_name])
